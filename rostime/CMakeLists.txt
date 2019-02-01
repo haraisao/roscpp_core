@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(rostime)
 
 find_package(catkin REQUIRED COMPONENTS cpp_common)
-find_package(Boost REQUIRED COMPONENTS date_time system thread)
+find_package(Boost REQUIRED COMPONENTS date_time system thread chrono)
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
@@ -11,6 +11,7 @@ catkin_package(
 )
 
 include_directories(include ${catkin_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
 
 add_library(rostime 
   src/duration.cpp

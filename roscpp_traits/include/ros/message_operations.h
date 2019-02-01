@@ -30,6 +30,20 @@
 
 #include <ostream>
 
+/*** for VC++ **/
+#ifdef WIN32
+# ifdef ERROR
+#  undef ERROR
+# endif
+# ifdef NO_ERROR
+#  undef NO_ERROR
+# endif
+# ifdef DELETE
+#  undef DELETE
+# endif
+#endif
++/**************/
+
 namespace ros
 {
 namespace message_operations
