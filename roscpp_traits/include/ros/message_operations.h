@@ -42,7 +42,7 @@
 #  undef DELETE
 # endif
 #endif
-+/**************/
+/**************/
 
 namespace ros
 {
