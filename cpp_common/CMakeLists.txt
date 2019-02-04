@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(cpp_common)
 
+#if(WIN32)
+#  set(Boost_USE_STATIC_LIBS 1 CACHE BOOL "" FORCE)
+#endif()
 find_package(Boost REQUIRED COMPONENTS system thread)
 find_package(console_bridge REQUIRED)
 find_package(catkin REQUIRED)
