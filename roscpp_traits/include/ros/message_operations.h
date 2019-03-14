@@ -86,5 +86,8 @@ struct Printer<uint8_t>
 # ifdef DELETE
 #  undef DELETE
 # endif
+# ifdef STRICT
+#  undef STRICT
+# endif
 #endif
 /**************/
